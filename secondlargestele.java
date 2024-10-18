@@ -1,8 +1,8 @@
 //Program to find second largest ele in an array
 public class secondlargestele {
     public static int secondlargest(int arr[]){
-        int largest=Integer.MIN_VALUE;
-        int second=Integer.MIN_VALUE;
+        int largest=arr[0];
+        int second=-1;
         for(int i=0;i<arr.length;i++){
             if(arr[i]>largest){
                 second=largest;
