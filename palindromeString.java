@@ -1,4 +1,4 @@
-public class palindromeString {
+public class solution{
     int isPalindrome(String S) {
         // code here
         int i=0;
