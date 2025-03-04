@@ -38,13 +38,20 @@ public class LinkedListImplementation {
 
         // To check the statck is empty or not
         boolean isEmpty() {
-            if (size == 0) {
-                return true;
-            }
-            return false;
+            return head==null;
         }
-
-        void display() {
+        void displayRec(Node h){
+            if(h==null) return ;
+            displayRec(h.next);
+            System.out.print(h.val+" ");
+        }
+        // to display the stack
+        void display(){
+            displayRec(head);
+            System.out.println();
+        }
+        // To print the stack in reverse order
+        void displayRev() {
             Node temp = head;
             while (temp != null) {
                 System.out.print(temp.val + " ");
@@ -68,6 +75,6 @@ public class LinkedListImplementation {
         st.pop();
         st.display(); // 30 19 90
         System.out.println(st.getsize()); // 3
-        System.out.println(st.isEmpty());
+        System.out.println(st.isEmpty()); //false
     }
 }
